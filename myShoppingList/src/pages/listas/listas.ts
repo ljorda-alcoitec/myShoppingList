@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { ListaPage } from '../lista/lista';
+
 @Component({
-  selector: 'page-list',
-  templateUrl: 'list.html'
+  selector: 'page-listas',
+  templateUrl: 'listas.html'
 })
-export class ListPage {
+export class ListasPage {
  
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  abrirLista(){
+  	this.navCtrl.push(ListaPage);
   }
 }

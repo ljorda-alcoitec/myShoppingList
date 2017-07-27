@@ -1,0 +1,14 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Nombre lista </ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<ion-list>
+		<ion-item *ngFor="let producto of productos">
+			<ion-label>{{producto}}</ion-label>
+			<ion-checkbox color="royal"></ion-checkbox>
+		</ion-item>
+	</ion-list>
+</ion-content>
