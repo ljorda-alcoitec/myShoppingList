@@ -8,37 +8,14 @@
 </ion-header>
 
 <ion-content>
-  <button ion-item (click)='abrirLista()'>
+  <button ion-item *ngFor="let lista of listas" (click)='abrirLista($event,lista.nombre)'>
     <ion-card>
       <ion-card-header>
-        Nombre lista 1
+        {{lista.nombre}}
       </ion-card-header>
       <ion-card-content>
-        Resumen lista 1
+        {{lista.resumen}}
       </ion-card-content>
     </ion-card>
   </button>
-
-  <button ion-item (click)='abrirLista()'>
-    <ion-card>
-      <ion-card-header>
-        Nombre lista 2
-      </ion-card-header>
-      <ion-card-content>
-        Resumen lista 2
-      </ion-card-content>
-    </ion-card>
-  </button>
-
-  <button ion-item (click)='abrirLista()'>
-    <ion-card>
-      <ion-card-header>
-        Nombre lista 3
-      </ion-card-header>
-      <ion-card-content>
-        Resumen lista 3
-      </ion-card-content>
-    </ion-card>
-  </button>
-
 </ion-content>
