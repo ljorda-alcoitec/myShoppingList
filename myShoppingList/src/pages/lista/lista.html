@@ -5,10 +5,11 @@
 </ion-header>
 
 <ion-content>
-	<ion-list>
+	<ion-item-group *ngFor="let categoria of categorias" >
+		<ion-item-divider color="light">{{categoria}}</ion-item-divider>
 		<ion-item *ngFor="let producto of productos">
-			<ion-label>{{producto}}</ion-label>
-			<ion-checkbox color="royal"></ion-checkbox>
+		<ion-label>{{producto}}</ion-label>
+		<ion-checkbox color="royal"></ion-checkbox>
 		</ion-item>
-	</ion-list>
+	</ion-item-group>
 </ion-content>
