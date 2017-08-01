@@ -1,0 +1,30 @@
+{
+	"supermercados": [
+		{
+			"id":0, 
+			"nombre": "Mercadona"
+		},
+		{
+			"id":1, 
+			"nombre": "MasyMas"
+		},
+		{
+			"id":2, 
+			"nombre": "Dia"
+		},
+		{
+			"id":3, 
+			"nombre": "Carrefour"
+		},
+		{
+			"id":4, 
+			"nombre": "Aldi"
+		},
+		{
+			"id":5,
+			"nombre": "Lidl"
+		}
+	]
+}
+
+	
