@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { ListasPage } from '../pages/listas/listas';
 import { ListaPage } from '../pages/lista/lista';
 import { SupermercadosPage } from '../pages/supermercados/supermercados';
+import { NuevoSupermercadoModalPage } from '../pages/nuevoSupermercadoModal/nuevoSupermercadoModal'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +20,8 @@ import { RestProvider } from '../providers/rest/rest';
     HomePage,
     ListasPage,
     ListaPage,
-    SupermercadosPage
+    SupermercadosPage,
+    NuevoSupermercadoModalPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { RestProvider } from '../providers/rest/rest';
     HomePage,
     ListasPage,
     ListaPage,
-    SupermercadosPage
+    SupermercadosPage,
+    NuevoSupermercadoModalPage
   ],
   providers: [
     StatusBar,
