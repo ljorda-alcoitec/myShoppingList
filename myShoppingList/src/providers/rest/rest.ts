@@ -21,6 +21,8 @@ export class RestProvider {
 		this.getApiUrl = "http://localhost:3000/supermercados";
 	}
 
+
+	//resolveGet(url, headers, params)
 	load(){
 		if(this.data){
 			return Promise.resolve(this.data)

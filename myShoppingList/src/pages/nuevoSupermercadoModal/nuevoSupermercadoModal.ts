@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ModalController, NavParams, ViewController } from 'ionic-angular';
+import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
 	selector: 'page-nuevoSupermercadoModal',
@@ -8,29 +9,21 @@ import { ModalController, NavParams, ViewController } from 'ionic-angular';
 
 export class NuevoSupermercadoModalPage{
 
-	constructor(public modalCtrl: ModalController){}
+	formSupermercado: FormGroup;
+
+	constructor(public modalCtrl: ModalController, public viewCtrl: ViewController, private formBuilder: FormBuilder){
+		this.formSupermercado = formBuilder.group({
+			'name': ['', Validators.required]
+		});
+	}
+
+	closeModal(){
+		this.viewCtrl.dismiss();
+	}
+
+	guardarSupermercado(){
+    	/*alert(JSON.stringify(this.formSupermercado.value));
+    	console.log(this.formSupermercado.value + "hola");*/
+  	}
 
 }
-
-
-//import { ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
-
-
-
-
-/*@Component({
-  selector: 'page-listas',
-  templateUrl: 'listas.html'
-})
-@Component({
-  templateUrl: 'template.html'
-})
-export class BasicPage {
-  constructor(public modalCtrl: ModalController) { }
-
-  openModal(characterNum) {
-
-    let modal = this.modalCtrl.create(ModalContentPage, characterNum);
-    modal.present();
-  }
-}*/

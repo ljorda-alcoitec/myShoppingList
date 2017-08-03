@@ -1,3 +1,32 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Nuevo</ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="closeModal()">
+                <ion-icon item-right name="ios-close-outline"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
 <ion-content>
-	hola
+	<form [formGroup]="formSupermercado" ngSubmit="guardarSupermercado()">
+    
+        <ion-item margin-bottom>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" formControlName="name" [class.invalid]="!formSupermercado.controls.name.valid && (formSupermercado.controls.name.valid.dirty)"></ion-input>
+        </ion-item>
+         <ion-item *ngIf="!formSupermercado.controls.name.valid  && (formSupermercado.controls.name.dirty)">
+                <p>Please enter a valid name.</p>
+            </ion-item>
+		 <ion-item margin-bottom>
+         <button ion-button color="primary"
+            text-center
+            block
+            [disabled]="!formSupermercado.valid">Añadir</button>
+      </ion-item>
+	</form>
+	
 </ion-content>
+
+    
